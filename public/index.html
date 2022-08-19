@@ -4,8 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pri: '#41BFB9',
+              sec: '#FDB25B'
+            },
+            fontSize: {
+              '90px': '90px'
+            }
+          }
+        }
+      }
+    </script>
+    <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
+    <link rel="icon" href="<%= BASE_URL %>gallycat_01.png">
+    <title>Gallycat - Follow the food trail</title>
   </head>
   <body>
     <noscript>

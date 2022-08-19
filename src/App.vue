@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <TeaserPage />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import TeaserPage from './components/Teaser.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TeaserPage
   }
 }
 </script>
 
 <style>
+@font-face {
+  font-family: 'Work-Sans';
+  src: url('https://res.cloudinary.com/dztwrgpbi/raw/upload/v1660876797/gallycat/fonts/work_sans/WorkSans-Regular.ttf');
+  font-weight: 400;
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'Work-Sans';
+  src: url('https://res.cloudinary.com/dztwrgpbi/raw/upload/v1660876795/gallycat/fonts/work_sans/WorkSans-Medium.ttf');
+  font-weight: 500;
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'Work-Sans';
+  src: url('https://res.cloudinary.com/dztwrgpbi/raw/upload/v1660876795/gallycat/fonts/work_sans/WorkSans-SemiBold.ttf');
+  font-weight: 600;
+  font-style: 'normal';
+}
+
+@font-face {
+  font-family: 'Work-Sans';
+  src: url('https://res.cloudinary.com/dztwrgpbi/raw/upload/v1660876793/gallycat/fonts/work_sans/WorkSans-Bold.ttf');
+  font-weight: 700;
+  font-style: 'normal';
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Work-Sans', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
