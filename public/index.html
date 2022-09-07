@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="">
   <head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WP4QX28');</script>
+    <!-- End Google Tag Manager -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
@@ -11,20 +18,37 @@
           extend: {
             colors: {
               pri: '#41BFB9',
-              sec: '#FDB25B'
+              sec: '#FDB25B',
+              dark: '#434343',
+              'off-white': '#FBFBFC'
+            },
+            screens: {
+              'xs': '390px'
+            },
+            backgroundImage: {
+              // 'mobile': 'url(https://res.cloudinary.com/dztwrgpbi/image/upload/v1662540810/gallycat/map_coming_soon_mobile.jpg)',
+              'se-linear': 'linear-gradient(0deg, rgba(253, 253, 253, 0) 0%, rgba(251, 251, 252, 0.6) 8%, rgba(251, 251, 252, 1) 30.1%)',
+              'se': 'linear-gradient(0deg, rgba(253, 253, 253, 1) 0%, rgba(251, 251, 252, 0.6) 5%, rgba(251, 251, 252, 0) 10.1%), url(https://res.cloudinary.com/dztwrgpbi/image/upload/v1662543635/gallycat/map_coming_soon_mobile_se.jpg)',
+              'mobile': 'linear-gradient(0deg, rgba(253, 253, 253, 1) 0%, rgba(251, 251, 252, 0.8) 5%, rgba(251, 251, 252, 0) 8%), url(https://res.cloudinary.com/dztwrgpbi/image/upload/v1662540810/gallycat/map_coming_soon_mobile_xs.jpg)',
+              'desktop': 'url(https://res.cloudinary.com/dztwrgpbi/image/upload/v1662532151/gallycat/map_coming_soon_desktop_resized.jpg)'
             },
             fontSize: {
-              '90px': '90px'
+              '90px': '90px',
+              '4.5xl': '2.85rem'
             }
           }
         }
       }
     </script>
     <!-- <link rel="icon" href="<%= BASE_URL %>favicon.ico"> -->
-    <link rel="icon" href="<%= BASE_URL %>gallycat_01.png">
+    <link rel="icon" href="<%= BASE_URL %>gallycat_logo_no_text.png">
     <title>Gallycat - Follow the food trail</title>
   </head>
   <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WP4QX28"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
