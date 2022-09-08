@@ -83,7 +83,7 @@
           return 'desktop'
         }
       },
-      handleOrientationChange(orientation) {
+      handleOrientationChange() {
         // only handling ipad
         // if (orientation.includes('portrait')) {
           this.innerH = window.innerHeight
@@ -107,7 +107,8 @@
       if (this.device == 'mobile') screen.orientation.lock('portrait')
       screen.orientation.addEventListener('change', (e) => {
         console.log('orientation changed', e.srcElement)
-        if (this.device == 'ipad') this.handleOrientationChange(e.srcElement)
+        // if (this.device == 'ipad') this.handleOrientationChange(e.srcElement)
+        if (this.device == 'ipad') this.handleOrientationChange()
       })
     }
   }
