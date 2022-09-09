@@ -1,7 +1,8 @@
 <template>
-  <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-off-white lg:bg-desktop relative">
+  <!-- <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-off-white lg:bg-desktop relative"> -->
+  <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-white lg:bg-off-white lg:bg-desktop relative">
 
-    <section class="lg:hidden w-full bg-se sm:bg-mobile md:bg-ipad bg-cover bg-no-repeat bg-bottom relative" :style="{ height: innerH + 'px' }">
+    <section class="lg:hidden w-full bg-se sm:bg-mobile md:bg-ipad bg-cover bg-no-repeat bg-center relative" :style="{ height: innerH + 'px' }">
       <div class="relative w-full flex flex-col items-center justify-center pt-5 sm:pt-8 pb-6 bg-mobile-header-gradient">
         <img alt="Gallycat logo" src="../assets/gallycat_logo_3x.png" class="w-12 sm:w-20 md:w-24 object-fit">
         <h1 class="text-dark font-bold text-4xl sm:text-4.5xl md:text-6xl whitespace-nowrap mt-4 sm:mt-8 md:mt-16 leading-tight">Coming soon</h1>
