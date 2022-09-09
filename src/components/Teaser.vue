@@ -1,10 +1,10 @@
 <template>
   <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-off-white lg:bg-desktop relative">
 
-    <section class="lg:hidden w-full bg-se xs:bg-mobile bg-cover md:bg-contain bg-no-repeat bg-bottom relative" :style="{ height: innerH + 'px' }">
-      <div class="relative w-full flex flex-col items-center justify-center pt-5 xs:pt-8 pb-6 bg-mobile-header-gradient">
-        <img alt="Gallycat logo" src="../assets/gallycat_logo_3x.png" class="w-12 xs:w-20 object-fit">
-        <h1 class="text-dark font-bold text-4xl xs:text-4.5xl whitespace-nowrap mt-4 xs:mt-8 leading-tight">Coming soon</h1>
+    <section class="lg:hidden w-full bg-se sm:bg-mobile md:bg-ipad bg-cover bg-no-repeat bg-bottom relative" :style="{ height: innerH + 'px' }">
+      <div class="relative w-full flex flex-col items-center justify-center pt-5 sm:pt-8 pb-6 bg-mobile-header-gradient">
+        <img alt="Gallycat logo" src="../assets/gallycat_logo_3x.png" class="w-12 sm:w-20 md:w-24 object-fit">
+        <h1 class="text-dark font-bold text-4xl sm:text-4.5xl md:text-6xl whitespace-nowrap mt-4 sm:mt-8 md:mt-16 leading-tight">Coming soon</h1>
       </div>
       <div class="absolute inset-x-0 bottom-8 flex justify-center" ref="arrow" @click="scrollToArrow">
         <div class="p-3 animate-bounce rounded-full bg-white bg-opacity-75">
@@ -17,7 +17,7 @@
     <section class="w-full lg:w-1/2 p-8 lg:p-0 mb-4 lg:mb-0">
       <img alt="Gallycat logo" src="../assets/gallycat_logo_3x.png" class="w-28 xl:w-32 object-fit hidden lg:block">
       <h1 class="text-dark font-bold text-6xl xl:text-90px mt-10 leading-tight hidden lg:block">Coming soon</h1>
-      <h2 class="text-sec font-bold text-3xl xs:text-4xl leading-none"
+      <h2 class="text-sec font-bold text-3xl sm:text-4xl leading-none"
         :class="h2ClassList">
         The future hub of culinary curators'
       </h2>
@@ -75,7 +75,7 @@
 
         const ipad = /iPad/i
 
-        if (navigator.userAgent.match(ipad)) {
+        if (navigator.userAgent.match(ipad) || (screen.orientation.type.includes('portrait') && window.innerWidth >= 768)) {
           return 'ipad'
         } else if (mobile.some((item) => navigator.userAgent.match(item))) {
           return 'mobile'
