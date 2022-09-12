@@ -1,5 +1,4 @@
 <template>
-  <!-- <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-white lg:bg-off-white lg:bg-desktop relative"> -->
   <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full lg:h-screen p-0 lg:p-16 bg-off-white lg:bg-desktop relative">
 
     <section class="lg:hidden w-full bg-se sm:bg-mobile md:bg-ipad bg-cover bg-no-repeat bg-center relative" :style="{ height: innerH + 'px' }">
@@ -47,7 +46,6 @@
             <span v-if="emailSubmitSuccess">Signed up!</span>
             <span v-else-if="isSubmitting">Signing up..</span>
             <span v-else>Sign me up!</span>
-            <!-- <img src="../assets/loading.svg" class="w-4 h-4 ml-3 animate-spin"> -->
             <img v-if="emailSubmitSuccess" src="../assets/success.svg" class="w-4 h-4 ml-3">
             <img v-else-if="isSubmitting" src="../assets/loading.svg" class="w-4 h-4 ml-3 animate-spin">
           </button>
@@ -117,15 +115,16 @@
       },
       submitEmail() {
         console.log('email:', this.email)
+        // const url = 'http://localhost:3000'
+        const url = 'https://gallycat-teaser.papercranetech.cn'
         if (!this.email) {
           // fetch
           this.emailSubmitError = true
         } else if (this.email.match(/^(.+)@(.+)$/)) {
           this.emailSubmitError = false
           this.isSubmitting = true
-          fetch(`http://localhost:3000/submit_email?email=${this.email}`, {
+          fetch(`${url}/submit_email?email=${this.email}`, {
             method: 'POST',
-            // mode: "cors" // "no-cors"
           }).then((response) => response.json()).then((data) => {
             console.log(data)
             this.isSubmitting = false
