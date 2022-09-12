@@ -1,5 +1,6 @@
 <template>
-  <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-white lg:bg-off-white lg:bg-desktop relative">
+  <!-- <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full h-screen p-0 lg:p-16 bg-white lg:bg-off-white lg:bg-desktop relative"> -->
+  <div class="bg-contain bg-bottom lg:bg-right bg-no-repeat w-full lg:h-screen p-0 lg:p-16 bg-off-white lg:bg-desktop relative">
 
     <section class="lg:hidden w-full bg-se sm:bg-mobile md:bg-ipad bg-cover bg-no-repeat bg-center relative" :style="{ height: innerH + 'px' }">
       <div class="relative w-full flex flex-col items-center justify-center pt-5 sm:pt-8 pb-6 bg-mobile-header-gradient">
