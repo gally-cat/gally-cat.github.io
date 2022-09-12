@@ -1,4 +1,6 @@
 const execa = require("execa");
+// import * as execa from 'execa';
+// import * as fs from 'fs';
 const fs = require("fs");
 (async () => {
   try {
